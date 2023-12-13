@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?import java.lang.?>
-<?import javafx.geometry.?>
-<?import javafx.scene.control.?>
-<?import javafx.scene.layout.?>
-<?import javafx.scene.text.*?>
 
+
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Button?>
 <GridPane fx:id="rootpane" alignment="CENTER" style="-fx-background-color: #f0f4f7;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ecommerceapp.LoginController">
     <columnConstraints>
         <ColumnConstraints hgrow="SOMETIMES" maxWidth="500.0" minWidth="10.0" prefWidth="300.0" />

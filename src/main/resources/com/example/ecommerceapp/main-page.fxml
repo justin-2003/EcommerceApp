@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane fx:id="borderPane" prefHeight="600.0" prefWidth="920.0" styleClass="border_pane" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.csc311_ecommerce.scenes.EcommerceController" style="-fx-background-color: #f8f9fa;">
+<BorderPane fx:id="borderPane" prefHeight="600.0" prefWidth="920.0" styleClass="border_pane" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ecommerceapp.MainController" style="-fx-background-color: #f8f9fa;">
     <top>
         <MenuBar fx:id="menuBar" prefHeight="28.0" prefWidth="913.0" styleClass="menu_bar" BorderPane.alignment="CENTER" style="-fx-background-color: #34495e; -fx-text-fill: white;">
             <!-- Add your menus here if needed -->
