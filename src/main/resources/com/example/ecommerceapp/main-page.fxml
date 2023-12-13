@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.MenuBar?>
@@ -12,65 +13,54 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane fx:id="borderPane" prefHeight="600.0" prefWidth="920.0" styleClass="border_pane" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ecommerceapp.MainController">
+<BorderPane fx:id="borderPane" prefHeight="600.0" prefWidth="920.0" styleClass="border_pane" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.csc311_ecommerce.scenes.EcommerceController" style="-fx-background-color: #f8f9fa;">
     <top>
-        <MenuBar fx:id="menuBar" prefHeight="28.0" prefWidth="913.0" styleClass="menu_bar" BorderPane.alignment="CENTER">
-            <menus>
-                <!-- Add your menus here if needed -->
-            </menus>
+        <MenuBar fx:id="menuBar" prefHeight="28.0" prefWidth="913.0" styleClass="menu_bar" BorderPane.alignment="CENTER" style="-fx-background-color: #34495e; -fx-text-fill: white;">
+            <!-- Add your menus here if needed -->
         </MenuBar>
     </top>
     <left>
-        <VBox prefHeight="540.0" prefWidth="132.0" styleClass="left_pane" BorderPane.alignment="CENTER">
-            <children>
-                <!-- Add product image and details here -->
-                <AnchorPane prefHeight="215.0" prefWidth="88.0">
-                    <children>
-                        <ImageView fx:id="productImageView" fitHeight="111.0" fitWidth="122.0" layoutX="10.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true" styleClass="image_view">
-                            <!-- Product image placeholder -->
-                        </ImageView>
-                    </children>
-                </AnchorPane>
-            </children>
+        <VBox prefHeight="540.0" prefWidth="132.0" styleClass="left_pane" BorderPane.alignment="CENTER" style="-fx-background-color: #2980b9; -fx-text-fill: white;">
+            <!-- Add categories or filters -->
+            <Button text="Categories" style="-fx-background-color: #3498db; -fx-text-fill: white;" />
+            <Button text="Filters" style="-fx-background-color: #3498db; -fx-text-fill: white;" />
+            <!-- ... (additional content) ... -->
         </VBox>
     </left>
     <bottom>
-        <HBox prefHeight="30.0" prefWidth="892.0" styleClass="admin_section" BorderPane.alignment="CENTER">
-            <!-- Add your e-commerce buttons here (e.g., Buy, Quantity) -->
+        <HBox prefHeight="60.0" prefWidth="892.0" styleClass="admin_section" BorderPane.alignment="CENTER" style="-fx-background-color: #2c3e50;">
+            <!-- Footer or functional buttons -->
+            <Button text="Add to Cart" style="-fx-background-color: #e74c3c; -fx-text-fill: white;" />
+            <Button text="Buy Now" style="-fx-background-color: #2ecc71; -fx-text-fill: white;" />
+            <!-- ... (additional content) ... -->
         </HBox>
     </bottom>
     <right>
-        <VBox prefHeight="540.0" prefWidth="202.0" styleClass="text_field_pane" BorderPane.alignment="CENTER">
-            <children>
-                <!-- Add product details text fields here (name, price, etc.) -->
-                <TextField fx:id="productNameField" promptText="Product Name" styleClass="text_field" />
-                <TextField fx:id="productPriceField" promptText="Product Price" styleClass="text_field" />
-                <TextField fx:id="productDescriptionField" promptText="Product Description" styleClass="text_field" />
-                <!-- Add more text fields as needed -->
-                <Button minWidth="-Infinity" mnemonicParsing="false" onAction="#addToCart" styleClass="db_btn" text="Add to Cart">
-                    <VBox.margin>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                    </VBox.margin>
-                </Button>
-            </children>
+        <VBox prefHeight="540.0" prefWidth="202.0" styleClass="text_field_pane" BorderPane.alignment="CENTER" style="-fx-background-color: #ecf0f1;">
+            <!-- Product details and search -->
+            <TextField promptText="Search" style="-fx-background-color: white; -fx-padding: 5px;" />
+            <TextField fx:id="productNameField" promptText="Product Name" styleClass="text_field" />
+            <TextField fx:id="productPriceField" promptText="Product Price" styleClass="text_field" />
+            <!-- ... (additional content) ... -->
         </VBox>
     </right>
     <center>
-        <ScrollPane fitToWidth="true" prefViewportHeight="500">
+        <ScrollPane fitToWidth="true" prefViewportHeight="500" style="-fx-background-color: #ffffff;">
             <VBox alignment="TOP_CENTER" spacing="10">
+                <!-- Product display -->
                 <TableView fx:id="productTableView" onMouseClicked="#viewProductDetails" prefHeight="539.0" prefWidth="566.0" styleClass="table_view" BorderPane.alignment="CENTER">
                     <columns>
-                        <!-- Add product columns (name, price, etc.) to the table -->
+                        <!-- Product columns -->
                         <TableColumn fx:id="productNameColumn" prefWidth="200.0" styleClass="table_columns" text="Product Name" />
                         <TableColumn fx:id="productPriceColumn" prefWidth="100.0" styleClass="table_columns" text="Price" />
                         <TableColumn fx:id="productAvailabilityColumn" prefWidth="100.0" styleClass="table_columns" text="Availability" />
-                        <!-- Add more columns as needed -->
+                        <!-- ... (additional columns) ... -->
                     </columns>
                 </TableView>
             </VBox>
         </ScrollPane>
     </center>
     <padding>
-        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
     </padding>
 </BorderPane>
