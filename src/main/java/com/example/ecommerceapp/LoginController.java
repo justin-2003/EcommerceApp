@@ -20,9 +20,9 @@ public class LoginController {
     @FXML
     public void login(ActionEvent actionEvent) {
         try {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/view/main-page.fxml")));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("main-page.fxml")));
             Scene scene = new Scene(root, 900, 600);
-            scene.getStylesheets().add(getClass().getResource("/css/lightTheme.css").toExternalForm());
+            //scene.getStylesheets().add(getClass().getResource("/css/lightTheme.css").toExternalForm());
             Stage window = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
             window.setScene(scene);
             window.show();
@@ -33,7 +33,7 @@ public class LoginController {
 
     public void signUp(ActionEvent actionEvent) {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("/view/signUp.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("/view/main-page.fxml"));
             Scene scene = new Scene(root, 900, 600);
             scene.getStylesheets().add(getClass().getResource("/css/lightTheme.css").toExternalForm());
             Stage window = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
