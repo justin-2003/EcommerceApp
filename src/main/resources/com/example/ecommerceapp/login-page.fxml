@@ -26,7 +26,7 @@
     </rowConstraints>
     <children>
         <!-- Header -->
-        <HBox alignment="CENTER" prefHeight="100.0" GridPane.columnSpan="2">
+       <HBox alignment="CENTER" prefHeight="100.0" GridPane.columnSpan="2">
             <children>
                 <Label alignment="CENTER" style="-fx-font-family: 'Arial'; -fx-font-size: 32px; -fx-text-fill: #283747;" text="Ecommerce Login" />
             </children>

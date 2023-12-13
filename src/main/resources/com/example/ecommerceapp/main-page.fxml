@@ -2,45 +2,51 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane fx:id="borderPane" prefHeight="600.0" prefWidth="920.0" styleClass="border_pane" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ecommerceapp.MainController" style="-fx-background-color: #f8f9fa;">
+<BorderPane fx:id="borderPane" prefHeight="800.0" prefWidth="1300.0" style="-fx-background-color: #f8f9fa;" styleClass="border_pane" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ecommerceapp.MainController">
     <top>
-        <MenuBar fx:id="menuBar" prefHeight="28.0" prefWidth="913.0" styleClass="menu_bar" BorderPane.alignment="CENTER" style="-fx-background-color: #34495e; -fx-text-fill: white;">
-            <!-- Add your menus here if needed -->
-        </MenuBar>
+        <MenuBar fx:id="menuBar" prefHeight="28.0" prefWidth="913.0" style="-fx-background-color: #34495e; -fx-text-fill: white;" styleClass="menu_bar" BorderPane.alignment="CENTER">
+         <menus>
+            <Menu mnemonicParsing="false" text="Theme">
+              <items>
+                  <MenuItem mnemonicParsing="false" onAction="#lightTheme" styleClass="menu_items" text="Light Theme" />
+                  <MenuItem mnemonicParsing="false" onAction="#darkTheme" styleClass="menu_items" text="Dark Theme" />
+              </items>
+            </Menu>
+         </menus></MenuBar>
     </top>
     <left>
-        <VBox prefHeight="540.0" prefWidth="132.0" styleClass="left_pane" BorderPane.alignment="CENTER" style="-fx-background-color: #2980b9; -fx-text-fill: white;">
+        <VBox prefHeight="540.0" prefWidth="132.0" styleClass="left_pane" BorderPane.alignment="CENTER">
             <!-- Add categories or filters -->
-            <Button text="Categories" style="-fx-background-color: #3498db; -fx-text-fill: white;" />
-            <Button text="Filters" style="-fx-background-color: #3498db; -fx-text-fill: white;" />
+            <Button prefHeight="25.0" prefWidth="144.0" styleClass="buttons" text="Categories" />
+            <Button prefHeight="25.0" prefWidth="141.0" styleClass="buttons" text="Filters" />
             <!-- ... (additional content) ... -->
         </VBox>
     </left>
     <bottom>
-        <HBox prefHeight="60.0" prefWidth="892.0" styleClass="admin_section" BorderPane.alignment="CENTER" style="-fx-background-color: #2c3e50;">
+        <HBox prefHeight="73.0" prefWidth="1280.0" styleClass="admin_section" BorderPane.alignment="CENTER">
+            <Button prefHeight="25.0" prefWidth="128.0" style="-fx-background-color: #2ecc71; -fx-text-fill: white;" styleClass="buttons" text="Buy Now" />
             <!-- Footer or functional buttons -->
-            <Button text="Add to Cart" style="-fx-background-color: #e74c3c; -fx-text-fill: white;" />
-            <Button text="Buy Now" style="-fx-background-color: #2ecc71; -fx-text-fill: white;" />
+            <Button prefHeight="25.0" prefWidth="125.0" style="-fx-background-color: #e74c3c; -fx-text-fill: white;" styleClass="buttons" text="Add to Cart" />
             <!-- ... (additional content) ... -->
         </HBox>
     </bottom>
     <right>
-        <VBox prefHeight="540.0" prefWidth="202.0" styleClass="text_field_pane" BorderPane.alignment="CENTER" style="-fx-background-color: #ecf0f1;">
+        <VBox prefHeight="540.0" prefWidth="202.0" styleClass="text_field_pane" BorderPane.alignment="CENTER">
             <!-- Product details and search -->
-            <TextField promptText="Search" style="-fx-background-color: white; -fx-padding: 5px;" />
-            <TextField fx:id="productNameField" promptText="Product Name" styleClass="text_field" />
-            <TextField fx:id="productPriceField" promptText="Product Price" styleClass="text_field" />
+            <TextField prefHeight="33.0" prefWidth="202.0" promptText="Search" styleClass="textfield" />
+            <TextField fx:id="productNameField" prefHeight="42.0" prefWidth="202.0" promptText="Product Name" styleClass="textfield" />
+            <TextField fx:id="productPriceField" prefHeight="38.0" prefWidth="202.0" promptText="Product Price" styleClass="textfield" />
             <!-- ... (additional content) ... -->
         </VBox>
     </right>
@@ -48,7 +54,7 @@
         <ScrollPane fitToWidth="true" prefViewportHeight="500" style="-fx-background-color: #ffffff;">
             <VBox alignment="TOP_CENTER" spacing="10">
                 <!-- Product display -->
-                <TableView fx:id="productTableView" onMouseClicked="#viewProductDetails" prefHeight="539.0" prefWidth="566.0" styleClass="table_view" BorderPane.alignment="CENTER">
+                <TableView fx:id="productTableView" onMouseClicked="#viewProductDetails" prefHeight="671.0" prefWidth="944.0" styleClass="table_view" BorderPane.alignment="CENTER">
                     <columns>
                         <!-- Product columns -->
                         <TableColumn fx:id="productNameColumn" prefWidth="200.0" styleClass="table_columns" text="Product Name" />
